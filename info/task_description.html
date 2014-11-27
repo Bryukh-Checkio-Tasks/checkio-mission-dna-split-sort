@@ -1,44 +1,61 @@
 <p>
-    <i>( Describe task in general )</i>
+    A nucleic acid sequence is a succession of letters that indicate the order of nucleotides within a DNA (using GACT)
+    or RNA (GACU) molecule. For this mission we are interested in DNA and "GACT" sequence.
+    The possible letters are A, C, G, and T, representing the four nucleotide bases of a DNA strand
+    — adenine, cytosine, guanine, thymine — covalently linked to a phosphodiester backbone.
 </p>
 
 <p>
-    Sum two passed ints
+    In this mission you should split a sequence at several parts by length,
+    sort them by numbers of inversion and join them in one sequence again.
 </p>
-
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    You are given a sequence of letters "A", "C", "G" and "T" and length of subsequences.
+    First you need split the given sequence by the given length. If last part is shorter, then drop it.
+    Then sort these subsequences by numbers of the inversion.
+    The number of inversion is a number of pairs of entries that are out of the alphabetic order with respect
+    to each other. For example, for "TAACGC" the number is 6 - 5 for T and other letters and 1 more for the last "GC".
+    If some subsequnces have the same numbers of inversion then use the order as they were in the original sequence.
+    And the last join these subsequences in one sequences. The final sequnce can be shorter than original.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    Let's look at an example. The given sequence is "ACGGCATAACCCTCGA" and partitioning naumber is 3.
+    First is spliting: "ACG", "GCA", "TAA", "CCC", "TCG" and "A". The last "A" is dropping.
+    Then count numbers of inversions: "ACG" - 0, "GCA" - 3, "TAA" - 2, "CCC" - 0, "TCG" - 3.
+    Sort them: "ACG", "CCC", "TAA", "GCA", "TCG". And join: "ACGCCCTAAGCATCG".
+</p>
+<p>
+    We have one more rule for this challenge. This is a code golf mission and your main goal is to make your code as
+    short as possible. The shorter your code, the more points you earn. Your score for this mission is dynamic and
+    directly related to the length of your code. For reference, scoring is based on the number of characters used. 20
+    characters is the maximum allowable and it will earn you zero points. For each character less than 200, you earn 1
+    point. For example for 150 character long code earns you 50 points.
+    In this mission we count whitespaces, but don't count indents (newline characters too).
+</p>
+<p>
+    <strong>Input: </strong> Two arguments. A sequence as a string and a partitioning number as an int.
 </p>
 
+<p>
+    <strong>Output: </strong> The sorted sequences as a string.
+</p>
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+    <textarea data-code="python">
+    </textarea>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
 </p>
 
 <p>
-    <strong>Precondition:</strong>
-    <i>Constraints for Input</i>
+    <strong>Precondition:</strong><br>
+    partition_number &le; len(sequence)<br>
+    all(x in "ACGT" for x in sequence)<br>
 </p>
