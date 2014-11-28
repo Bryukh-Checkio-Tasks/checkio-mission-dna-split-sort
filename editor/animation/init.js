@@ -40,10 +40,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'checkio';
+            var fname = 'golf';
 
             var checkioInput = data.in;
-            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput) + ')';
+            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput[0]) + checkioInput[1] + ')';
 
             var failError = function (dError) {
                 $content.find('.call').html(checkioInputStr);
