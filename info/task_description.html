@@ -1,22 +1,21 @@
 <p>
-    A nucleic acid sequence is a succession of letters that indicate the order of nucleotides within a DNA (using GACT)
-    or RNA (GACU) molecule. For this mission we are interested in DNA and "GACT" sequence.
-    The possible letters are A, C, G, and T, representing the four nucleotide bases of a DNA strand
-    — adenine, cytosine, guanine, thymine — covalently linked to a phosphodiester backbone.
+    When studying a nucleic acid sequence, a succession of letters is used to indicate the order of nucleotides within a
+    DNA (using GACT) or RNA (GACU) molecule. For this mission we are specifically interested in DNA and the "GACT"
+    sequence. The possible letters are A, C, G, and T, representing the four nucleotide bases of a DNA strand — adenine,
+    cytosine, guanine, thymine — covalently linked to a phosphodiester backbone.
 </p>
 
 <p>
-    In this mission you should split a sequence at several parts by length,
-    sort them by numbers of inversion and join them in one sequence again.
+    For this mission you should split a sequence in several sections by length, sort them by number of inversions and
+    join them into one sequence again.
 </p>
 <p>
-    You are given a sequence of letters "A", "C", "G" and "T" and length of subsequences.
-    First you need split the given sequence by the given length. If last part is shorter, then drop it.
-    Then sort these subsequences by numbers of the inversion.
-    The number of inversion is a number of pairs of entries that are out of the alphabetic order with respect
+    You are given a sequence of letters "A", "C", "G" and "T" and length of subsequences. First you need split the given
+    sequence by the given length. If last part is shorter, then drop it. Then sort these subsequences by numbers of the
+    inversion. The number of inversion is a number of pairs of entries that are out of the alphabetic order with respect
     to each other. For example, for "TAACGC" the number is 6 - 5 for T and other letters and 1 more for the last "GC".
-    If some subsequnces have the same numbers of inversion then use the order as they were in the original sequence.
-    And the last join these subsequences in one sequences. The final sequnce can be shorter than original.
+    If some subsequences have the same numbers of inversion then use the order as they were in the original sequence.
+    Lastly join these subsequences in one sequences. The final sequence can be shorter than original.
 </p>
 
 <p>
@@ -26,12 +25,10 @@
     Sort them: "ACG", "CCC", "TAA", "TCG", "GCA". And join: "ACGCCCTAATCGGCA".
 </p>
 <p>
-    We have one more rule for this challenge. This is a code golf mission and your main goal is to make your code as
-    short as possible. The shorter your code, the more points you earn. Your score for this mission is dynamic and
-    directly related to the length of your code. For reference, scoring is based on the number of characters used. 20
-    characters is the maximum allowable and it will earn you zero points. For each character less than 200, you earn 1
-    point. For example for 150 character long code earns you 50 points.
-    In this mission we count whitespaces, but don't count indents (newline characters too).
+    Let's look at an example. The given sequence is "ACGGCATAACCCTCGA" and partitioning number is 3. First is splitting:
+    "ACG", "GCA", "TAA", "CCC", "TCG" and "A". The last "A" is dropping. Then count numbers of inversions: "ACG" - 0,
+    "GCA" - 3, "TAA" - 2, "CCC" - 0, "TCG" - 2. Sort them: "ACG", "CCC", "TAA", "TCG", "GCA". And join:
+    "ACGCCCTAATCGGCA".
 </p>
 <p>
     <strong>Input: </strong> Two arguments. A sequence as a string and a partitioning number as an int.
@@ -46,12 +43,14 @@
     <p>
         <strong>Example:</strong>
     </p>
-    <textarea data-code="python">
-    </textarea>
+    <textarea data-code="python">golf("ACGGCATAACCCTCGA") == "ACGCCCTAATCGGCA"</textarea>
 </div>
-
+<br>
 <p class="for_info_only">
     <strong>How it is used: </strong>
+    These concepts can be applied to bioinformatics, an interdisciplinary field which develops methods and tools for
+    understanding biological data.
+
 </p>
 
 <p>
