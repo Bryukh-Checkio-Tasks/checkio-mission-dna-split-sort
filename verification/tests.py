@@ -10,33 +10,29 @@ Each test is dict with
 TESTS = {
     "Basics": [
         {
-            "input": ['ACGTC', 'TTACTC'],
-            "answer": "ACTC",
-        },
+            "input": ['ACGGCATAACCCTCGA', 3],
+            "answer": "ACGCCCTAATCGGCA"},
         {
-            "input": ['TTACTC', 'ACGTC'],
-            "answer": "ACTC",
-        },
+            "input": ['ACGTTGCAACGTAGCT', 4],
+            "answer": "ACGTACGTAGCTTGCA"},
         {
-            "input": ['CGCTA', 'TACCG'],
-            "answer": "CC,CG,TA",
-        },
+            "input": ['CGTAGCA', 1],
+            "answer": "CGTAGCA"},
         {
-            "input": ['GCTT', 'AAAAA'],
-            "answer": "",
-        },
+            "input": ['GCTACGG', 7],
+            "answer": "GCTACGG"},
         {
-            "input": ['CGTCGTCGT', 'CGTACGT'],
-            "answer": "CGTCGT",
-        },
+            "input": ['GGGCCCTTTAAA', 4],
+            "answer": "CCTTGGGCTAAA"},
         {
-            "input": ['TGCAAAACGT', 'ACGTAAAATGCA'],
-            "answer": "CAAAAC,CAAAAG,CAAAAT,GAAAAC,GAAAAG,GAAAAT,TAAAAC,TAAAAG,TAAAAT",
-        },
+            "input": ['GCATCTAGCAGCATGCATCGTAGCATCGATCTAGTCAGATCGATGTATAGGCCGCG', 10],
+            "answer": "CGATGTATAGGCATGCATCGTAGCATCGATCTAGTCAGATGCATCTAGCA"},
         {
-            "input": ['GGGCCCAAA', 'AAACCCGGGG'],
-            "answer": "AAA,CCC,GGG",
-        },
+            "input": ['A', 1],
+            "answer": "A"},
+        {
+            "input": ['GGGGGGGGGGG', 2],
+            "answer": "GGGGGGGGGG"},
     ],
     "Extra": [
         {
